@@ -3,7 +3,7 @@ const app = express();
 const controllers = require('./controllers');
 const PORT = '4001';
 
-// require('./config/db.connection')
+require('./config/db.connection')
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
