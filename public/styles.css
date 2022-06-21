@@ -67,15 +67,34 @@ a {
 
 .character-card {
     height: 28vh;
+    border-bottom: 3px solid #221D23;
     display: grid;
+    margin-bottom: 2vh;
     grid-template-columns: 1fr 4fr;
     grid-template-areas:
     "image details";
 }
-
+.character-sheet {
+    max-width: 100%;
+    max-height: 100%;
+    height: 70vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.stats  {
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+}
+.title {
+    margin: 10px;
+}
 .image {
     grid-area: image;
-    background: red;
+    background: #E4D6A7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,6 +108,11 @@ a {
     max-height: 28vh;
 }
 .details {
+    font-size: 3vh;
     grid-area: details;
-    background: orange;
+    background: #E4D6A7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }

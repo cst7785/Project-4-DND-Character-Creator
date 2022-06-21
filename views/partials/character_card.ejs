@@ -1,4 +1,15 @@
 <div class="character-card">
-    <div class="image"><img src="<%= character.image %>" alt=""></div>
-    <div class="details"><a href="/characters/<%= character._id %>"><%= character.name %></a></div>
+    <div class="image"><a href="/characters/<%= character._id %>"><img src="<%= character.image %>" alt=""></a></div>
+    <div class="details">
+        <a href="/characters/<%= character._id %>"><%= character.name %></a>
+        <p class="title">Level <%= character.level %> <%= character.race %> <%= character.subclass %> <%= character.class %></p>
+        <p>
+            STR: <%=character.stats.strength%>
+            DEX: <%=character.stats.dexterity%>
+            CON: <%=character.stats.constitution%>
+            INT: <%=character.stats.intelligence%>
+            WIS: <%=character.stats.wisdom%>
+            CHA: <%=character.stats.charisma%>
+        </p>
+    </div>
 </div>
