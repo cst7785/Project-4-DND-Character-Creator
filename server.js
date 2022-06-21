@@ -2,7 +2,11 @@ const express = require('express');
 const app = express();
 const controllers = require('./controllers');
 const methodOverride = require('method-override')
-const PORT = '4001';
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 4001;
+}
+
 
 require('./config/db.connection')
 
@@ -21,4 +25,4 @@ app.use('/signin', controllers.signin);
 // });
 
 
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+app.listen(port, () => console.log(`Listening on port: ${port}`));

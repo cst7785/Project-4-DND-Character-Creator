@@ -37,7 +37,6 @@ router.get('/edit/:id', async (req, res, next)=>{
 router.put('/characters/:id', async (req, res, next) => {
     try {
         let updatedCharacterInformation = await db.Character.findByIdAndUpdate(req.params.id, req.body);
-        console.log(updatedCharacterInformation.stats._id)
         let updatedStats = {
             character: req.params.id,
             strength: req.body.strength,
@@ -70,7 +69,6 @@ router.post('/', async (req, res, next) => {
             intelligence: req.body.intelligence,
             wisdom: req.body.wisdom,
             charisma: req.body.charisma};
-        console.log(stats)
         stats = await db.Stats.create(stats);
         characterInformation = await db.Character.findByIdAndUpdate(characterInformation._id, {stats: stats})
         res.redirect('/');

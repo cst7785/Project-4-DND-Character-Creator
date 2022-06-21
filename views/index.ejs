@@ -13,7 +13,6 @@
     <div class="main">
         <% for (let i = 0; i < characters.length; i++) {%>
             <% let character = characters[i] %>
-            <% console.log(character) %>
             <%- include('partials/character_card', {character: character})  %>
         <% } %>
     </div>
