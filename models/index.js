@@ -1,5 +1,6 @@
 module.exports = {
     Character: require('./Character'),
+    Stats: require('./Stats'),
     Background: require('models/Background'),
     Race: require('models/Race'),
     Alignment: require('models/Alignment'),

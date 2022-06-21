@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Test 1</title>
+</head>
+<body>
+    <div class="left-side"></div>
+    <div class="header">
+        <a href="/">Home</a>
+        <a href="/new">New Character</a>
+        <a href="/manual">Game Information</a>
+        <a href="/forums">Forums</a>
+        <a href="/signin">Sign In</a>
+    </div>
+    <div class="main">
+        <form method="POST" action="/">
+            <div>
+                <label for="name"> Character Name: </label>
+                <input id="name" name="name" type="text" />
+            </div>
+            <div>
+                <label for="level"> Character Level: </label>
+                <input id="level" name="level" type="number" min="1" />
+            </div>
+            <div>
+                <label for="Race"> Race: </label>
+                <input id="Race" name="Race" type="text" />
+            </div>
+            <div>
+                <label for="class"> Class: </label>
+                <input id="class" name="class" type="text" />
+            </div>
+            <div>
+                <label for="subclass"> Subclass: </label>
+                <input id="subclass" name="subclass" type="text" />
+            </div>
+            <div>
+                <label for="image"> Character Image(url): </label>
+                <input id="image" name="image" type="text" />
+            </div>
+            <div>
+                <label for="Strength"> Strength: </label>
+                <input id="Strength" name="Strength" type="number" min="1" />
+            </div>
+            <div>
+                <label for="Dexterity"> Dexterity: </label>
+                <input id="Dexterity" name="Dexterity" type="number" min="1" />
+            </div>
+            <div>
+                <label for="Constitution"> Constitution: </label>
+                <input id="Constitution" name="Constitution" type="number" min="1"/>
+            </div>
+            <div>
+                <label for="Intelligence"> Intelligence: </label>
+                <input id="Intelligence" name="Intelligence" type="number" min="1" />
+            </div>
+            <div>
+                <label for="Wisdom"> Wisdom: </label>
+                <input id="Wisdom" name="Wisdom" type="number" min="1" />
+            </div>
+            <div>
+                <label for="Charisma"> Charisma: </label>
+                <input id="Charisma" name="Charisma" type="number" min="1" />
+            </div>
+            <input type="submit" value="Create New Character">
+        </form>
+    </div>
+    <div class="right-side"></div>
+    <div class="footer"></div>
+</body>
+</html>
