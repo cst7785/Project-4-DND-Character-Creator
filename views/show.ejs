@@ -15,6 +15,12 @@
         <a href="/edit/<%= character._id %>">Edit Character</a>
         <h2><%= character.name %></h2>
         <p>Level <%= character.level %> <%= character.race %> <%= character.subclass %> <%= character.class %></p>
+        <h3>Strength:</h3><p><%=character.stats.strength%></p>
+        <h3>Dexerity:</h3><p><%=character.stats.dexterity%></p>
+        <h3>Constitution:</h3><p><%=character.stats.constitution%></p>
+        <h3>Intelligence:</h3><p><%=character.stats.intelligence%></p>
+        <h3>Wisdom:</h3><p><%=character.stats.wisdom%></p>
+        <h3>Charisma:</h3><p><%=character.stats.charisma%></p>
     </div>
     <div class="right-side"></div>
     <div class="footer"></div>
