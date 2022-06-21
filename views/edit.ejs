@@ -5,63 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <title>Test 1</title>
+    <title>Test 2</title>
 </head>
 <body>
     <div class="left-side"></div>
-
     <%- include('./partials/nav.ejs') %>
     <div class="main">
-        <form method="POST" action="/">
+        <form method="POST" action="/characters/<%= character._id%>?_method=PUT">
             <div>
                 <label for="name"> Character Name: </label>
-                <input id="name" name="name" type="text" />
+                <input id="name" name="name" type="text" value="<%= character.name %>"/>
             </div>
             <div>
                 <label for="level"> Character Level: </label>
-                <input id="level" name="level" type="number" min="1" value="1"/>
+                <input id="level" name="level" type="number" min="1" value="<%= character.level %>"/>
             </div>
             <div>
                 <label for="race"> Race: </label>
-                <input id="race" name="race" type="text" />
+                <input id="race" name="race" type="text" value="<%= character.race %>"/>
             </div>
             <div>
                 <label for="class"> Class: </label>
-                <input id="class" name="class" type="text" />
+                <input id="class" name="class" type="text" value="<%= character.class %>"/>
             </div>
             <div>
                 <label for="subclass"> Subclass: </label>
-                <input id="subclass" name="subclass" type="text" />
+                <input id="subclass" name="subclass" type="text" value="<%= character.subclass %>"/>
             </div>
             <div>
-                <label for="image"> Character Image(url): </label>
-                <input id="image" name="image" type="text" />
+                <label for="image"> Character Image(url):</label>
+                <input id="image" name="image" type="text" value="<%= character.image%>"/>
             </div>
             <div>
                 <label for="strength"> Strength: </label>
-                <input id="strength" name="strength" type="number" min="1" value="10" />
+                <input id="strength" name="strength" type="number" min="1" value="<%= character.stats.strength %>"/>
             </div>
             <div>
                 <label for="dexterity"> Dexterity: </label>
-                <input id="dexterity" name="dexterity" type="number" min="1" value="10" />
+                <input id="dexterity" name="dexterity" type="number" min="1" value="<%= character.stats.dexterity %>"/>
             </div>
             <div>
                 <label for="constitution"> Constitution: </label>
-                <input id="constitution" name="constitution" type="number" min="1" value="10"/>
+                <input id="constitution" name="constitution" type="number" min="1" value="<%= character.stats.constitution %>"/>
             </div>
             <div>
                 <label for="intelligence"> Intelligence: </label>
-                <input id="intelligence" name="intelligence" type="number" min="1" value="10" />
+                <input id="intelligence" name="intelligence" type="number" min="1" value="<%= character.stats.intelligence %>"/>
             </div>
             <div>
                 <label for="wisdom"> Wisdom: </label>
-                <input id="wisdom" name="wisdom" type="number" min="1" value="10" />
+                <input id="wisdom" name="wisdom" type="number" min="1" value="<%= character.stats.wisdom %>"/>
             </div>
             <div>
                 <label for="charisma"> Charisma: </label>
-                <input id="charisma" name="charisma" type="number" min="1" value="10" />
+                <input id="charisma" name="charisma" type="number" min="1" value="<%= character.stats.charisma %>"/>
             </div>
-            <input type="submit" value="Create New Character">
+            <input type="submit" value="Edit <%=character.name%>">
         </form>
     </div>
     <div class="right-side"></div>

@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <title>Test 1</title>
+    <title>Test 2</title>
 </head>
 <body>
     <div class="left-side"></div>
     <%- include('./partials/nav.ejs') %>
-    <div class="main"><p>Sorry! This page does not exist yet.</p></div>
+    <div class="main">
+        <img src="<%= character.image %>" alt="">
+        <a href="/edit/<%= character._id %>">Edit Character</a>
+        <h2><%= character.name %></h2>
+        <p>Level <%= character.level %> <%= character.race %> <%= character.subclass %> <%= character.class %></p>
+    </div>
     <div class="right-side"></div>
     <div class="footer"></div>
 </body>

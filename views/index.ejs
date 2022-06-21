@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <title>Test 1</title>
 </head>
 <body>
     <div class="left-side"></div>
-    <div class="header">
-        <a href="/">Home</a>
-        <a href="/new">New Character</a>
-        <a href="/manual">Game Information</a>
-        <a href="/forums">Forums</a>
-        <a href="/signin">Sign In</a>
-    </div>
+    <%- include('./partials/nav.ejs') %>
     <div class="main">
+        <% for (let i = 0; i < characters.length; i++) {%>
+            <% let character = characters[i] %>
+            <% console.log(character) %>
+            <%- include('partials/character_card', {character: character})  %>
+        <% } %>
     </div>
     <div class="right-side"></div>
     <div class="footer"></div>

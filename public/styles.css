@@ -21,6 +21,10 @@ a {
     text-decoration: none;
 }
 
+.main a {
+    color:#221D23;
+}
+
 .left-side {
     background: url(https://pbs.twimg.com/media/EBUM7zMXYAA0sOh.jpg:large);
     background-size: cover;
@@ -62,7 +66,7 @@ a {
 
 
 .character-card {
-    height: 30vh;
+    height: 28vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-areas:
@@ -72,8 +76,18 @@ a {
 .image {
     grid-area: image;
     background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.main img {
+    max-width: 28vh;
+    max-height: 28vh;
+}
 .details {
     grid-area: details;
     background: orange;
